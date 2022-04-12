@@ -2,7 +2,7 @@
     "auth": {
       "identityProviders": {
         "customOpenIdConnectProviders": {
-          "b2c": {
+          "myProvider": {
             "registration": {
               "clientIdSettingName": "MY_PROVIDER_CLIENT_ID",
               "clientCredential": {
@@ -12,13 +12,13 @@
                 "wellKnownOpenIdConfiguration": "https://TomTestB2C.b2clogin.com/TomTestB2C.onmicrosoft.com/B2C_1_swasignupsignin/v2.0/.well-known/openid-configuration"
               }
             },
-          "login": {
-            "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
-            "scopes": [],
-            "loginParameterNames": []
-          }
+            "login": {
+              "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+              "scopes": [],
+              "loginParameterNames": []
             }
           }
         }
       }
+    }
   }
