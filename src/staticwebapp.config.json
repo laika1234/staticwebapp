@@ -4,9 +4,9 @@
         "customOpenIdConnectProviders": {
           "b2c": {
             "registration": {
-              "clientIdSettingName": "B2C_CLIENT_ID",
+              "clientIdSettingName": "MY_PROVIDER_CLIENT_ID",
               "clientCredential": {
-                "clientSecretSettingName": "B2C_CLIENT_SECRET"
+                "clientSecretSettingName": "MY_PROVIDER_CLIENT_SECRET"
               },
               "openIdConnectConfiguration": {
                 "wellKnownOpenIdConfiguration": "https://TomTestB2C.b2clogin.com/TomTestB2C.onmicrosoft.com/B2C_1_swasignupsignin/v2.0/.well-known/openid-configuration"
