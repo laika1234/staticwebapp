@@ -40,7 +40,7 @@
                 }
               },
               "login": {
-                "loginParameters":[
+                "loginParameterNames":[
                       "resource=https://TomTestB2C.onmicrosoft.com/demoapi2"],
                 "nameClaimType": "emails",
                 "scopes": [ "openid" ]       
