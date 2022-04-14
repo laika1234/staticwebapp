@@ -26,7 +26,6 @@
       "Access-Control-Allow-Methods": "GET, OPTIONS"
     },
     "auth": {
-      "rolesSource": "/api/function1",
       "identityProviders": {
           "azureActiveDirectory": {
               "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
@@ -34,11 +33,6 @@
                   "openIdIssuer": "https://login.microsoftonline.com/e4c9ab4e-bd27-40d5-8459-230ba2a757fb",
                   "clientIdSettingName": "AAD_CLIENT_ID",
                   "clientSecretSettingName": "AAD_CLIENT_SECRET"
-              },
-              "login": {
-                  "loginParameters": [
-                      "resource=https://graph.microsoft.com"
-                  ]
               }
           }
       }
