@@ -26,15 +26,27 @@
       "Access-Control-Allow-Methods": "GET, OPTIONS"
     },
     "auth": {
-      "identityProviders": {
-          "azureActiveDirectory": {
-              "userDetailsClaim": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+        "rolesSource": "/api/function1",
+        "identityProviders": {
+          "customOpenIdConnectProviders": {
+            "b2c": {
               "registration": {
-                  "openIdIssuer": "https://login.microsoftonline.com/e4c9ab4e-bd27-40d5-8459-230ba2a757fb",
-                  "clientIdSettingName": "AAD_CLIENT_ID",
-                  "clientSecretSettingName": "AAD_CLIENT_SECRET"
+                "clientIdSettingName": "B2C_CLIENT_ID",
+                "clientCredential": {
+                  "clientSecretSettingName": "B2C_CLIENT_SECRET"
+                },
+                "openIdConnectConfiguration": {
+                  "wellKnownOpenIdConfiguration": "https://TomTestB2C.b2clogin.com/TomTestB2C.onmicrosoft.com/B2C_1_swasignupsignin/v2.0/.well-known/openid-configuration"
+                }
+              },
+              "login": {
+                "loginParameterNames":[
+                      "resource=https://TomTestB2C.onmicrosoft.com/demoapi2"],
+                "nameClaimType": "emails",
+                "scopes": [ "openid","profile","email" ]       
               }
+            }
           }
+        }
       }
-  }
 }
