@@ -41,7 +41,7 @@
               },
               "login": {
                 "loginParameterNames":[
-                      "resource=https://TomTestB2C.onmicrosoft.com/demoapi2"],
+                      "resource=https://graph.microsoft.com"],
                 "nameClaimType": "emails",
                 "scopes": [ "openid","profile","email" ]       
               }
